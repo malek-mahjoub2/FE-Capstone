@@ -1,0 +1,179 @@
+/* Styling for the Italy page */
+.italy-page {
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* Center all text */
+  }
+  
+  .header-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .intro-section {
+    padding: 50px;
+    background-color: #f5f5f5;
+  }
+  
+  .intro-text {
+    text-align: center; /* Center intro text */
+    margin-top: 20px;
+  }
+  
+  .intro-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .intro-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* Styling for destinations section */
+  .destinations-section {
+    padding: 50px 20px;
+    background-color: #fff;
+  }
+  
+  .destinations-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 40px; /* Space between title and grid */
+  }
+  
+  .destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 30px;
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the grid */
+  }
+  
+  .destination-item {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .destination-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .destination-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .destination-item h3 {
+    padding: 20px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .destination-item p {
+    padding: 0 20px 20px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Styling for travel essentials */
+  .essentials-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .essentials-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 40px; /* Space between title and grid */
+  }
+  
+  .essentials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 20px;
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the grid */
+  }
+  
+  .essential-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .essential-item h3 {
+    font-size: 1.3rem;
+    color: #333;
+  }
+  
+  .essential-item p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Styling for local cuisine section */
+  .cuisine-section {
+    padding: 50px 20px;
+    background-color: #fff;
+  }
+  
+  .cuisine-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 40px; /* Space between title and grid */
+  }
+  
+  .cuisine-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 30px;
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the grid */
+  }
+  
+  .cuisine-item {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .cuisine-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .cuisine-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .cuisine-item h3 {
+    padding: 20px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .cuisine-item p {
+    padding: 0 20px 20px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .destinations-grid,
+    .essentials-grid,
+    .cuisine-grid {
+      grid-template-columns: 1fr; /* One item per row on smaller screens */
+    }
+  }

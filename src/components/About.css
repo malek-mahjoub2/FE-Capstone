@@ -1,0 +1,102 @@
+/* AboutSection.css */
+.about-section {
+  background-color: #fff; /* White background for the section */
+  padding: 50px 20px;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo-placeholder {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-placeholder img {
+  width: 120px; /* Adjust logo size */
+}
+
+.agency-name {
+  font-size: 3rem;
+  color: #2b2b2b; /* Dark color for agency name */
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.mission-statement,
+.services,
+.about,
+.contact-info {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff; /* White background for each section */
+  border: 1px solid #eee; /* Light border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Soft shadow around sections */
+  border-radius: 8px; /* Rounded corners */
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2b2b2b;
+  margin-bottom: 20px;
+  text-align: center; /* Centered title */
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: center; /* Centered text */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: center; /* Centered list items */
+}
+
+ul li strong {
+  color: #008CBA;  /* Highlighting service names with blue */
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info a{
+  color:white;
+}
+
+
+.contact-link {
+background-color: #008CBA;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.contact-link:hover {
+  background-color: #005f73;
+  transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+}

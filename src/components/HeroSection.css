@@ -1,0 +1,172 @@
+/* Hero Section Container */
+.hero-section {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* Dark Overlay */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for better readability */
+  z-index: 1; /* Ensure it's above the video */
+}
+
+/* Video Background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Full height of the parent */
+  object-fit: cover; /* Ensure the video covers the entire area */
+  z-index: 0; /* Place it behind the content */
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensure it's above the overlay and video */
+  padding: 0 20px;
+  max-width: 800px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Plan Your Trip Button */
+.hero-btn {
+  background-color: white;
+  color: #007bff;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border: 2px solid #007bff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 30px;
+}
+
+.hero-btn:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Search Bar */
+.hero-search {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 2; /* Ensure it's above the overlay and video */
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #0073e6;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  width: 250px;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #666;
+}
+
+.search-input:focus {
+  border-color: #005bb5;
+  box-shadow: 0 0 8px rgba(0, 115, 230, 0.5); /* Glow effect on focus */
+}
+
+.search-button {
+  padding: 12px 24px;
+  background-color: #0073e6;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.5rem; /* Adjusted for smaller screens */
+  }
+
+  .hero-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .search-input {
+    width: 200px;
+    font-size: 14px;
+  }
+
+  .search-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-subtitle {
+    font-size: 1.2rem; /* Adjusted for mobile screens */
+  }
+
+  .hero-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .search-input {
+    width: 180px;
+    font-size: 12px;
+  }
+
+  .search-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}

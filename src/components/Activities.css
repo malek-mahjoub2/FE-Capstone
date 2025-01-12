@@ -1,0 +1,68 @@
+.intro-container {
+  padding: 80px 20px 60px; /* Added more padding at the top for spacing */
+  text-align: center;
+  background-color: white; /* Changed background to white */
+}
+
+.intro-title {
+  font-size: 2.8rem;
+  margin-bottom: 30px; /* Added more space below the title */
+  color: #1A5D8B; /* Changed color to black */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 40px; /* Added more space below the text */
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-icons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.icon-item {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white; /* Added white background to each activity section */
+  padding: 20px; /* Added padding for better spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+.icon-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.icon-img {
+  width: 300px; /* Increased width for rectangular shape */
+  height: 300px; /* Set height for rectangular shape */
+  margin-bottom: 15px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.icon-item p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.icon-item:hover .icon-img {
+  transform: scale(1.1); /* Zoom effect */
+}

@@ -1,0 +1,99 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  
+}
+
+main {
+  background-color: #fff; /* Set parent container background to white */
+  min-height: 100px; 
+  width: 100%;
+  margin:0;
+}
+#itinerary-planner {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+  
+  border-radius: 8px;
+  max-width: 1200px;
+  width: 100%; 
+  margin: 0 auto;
+}
+
+#itinerary-planner h2 {
+  font-size: 2.5rem;
+  color: #1A5D8B; /* Title color */
+  text-align: center;
+  margin-bottom: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Country Selection Menu */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.menu button {
+  background-color: #fff;
+  color: #1A5D8B;
+  padding: 12px 24px;
+  border: 2px solid #1A5D8B;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu button:hover {
+  background-color: #1A5D8B;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.menu button.active {
+  background-color: #1A5D8B;
+  color: #fff;
+  border-color: #1A5D8B;
+}
+
+/* Itinerary Content */
+.itinerary-content {
+  background-color: #fff; /* Light gray background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu {
+    flex-wrap: wrap;
+  }
+
+  .menu button {
+    flex: 1 1 45%;
+    margin-bottom: 10px;
+  }
+
+  #itinerary-planner h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu button {
+    flex: 1 1 100%;
+  }
+
+  #itinerary-planner h2 {
+    font-size: 1.8rem;
+  }
+}

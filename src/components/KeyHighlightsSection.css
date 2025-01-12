@@ -1,0 +1,120 @@
+main {
+  background-color: #fff; /* Set parent container background to white */
+  width: 100%; }
+.key-highlights-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+  
+  border-radius: 8px;
+  max-width: 1200px;
+  width: 100%; 
+  margin: 0 auto;
+}
+
+.highlights-title {
+  font-size: 2.5rem;
+  color: #1A5D8B;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6rem;
+}
+
+.country-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; 
+  width: 100%; /* Ensure it takes full width */
+  padding: 0 20px;
+}
+
+.country-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 20px); /* Ensure 4 items per row with gap */
+  max-width: calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 100%;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.country-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image-box {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.country-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the box */
+}
+
+.rating {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between stars */
+}
+
+.rating span {
+  font-size: 14px;
+  color: #666;
+}
+
+.explore-btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #FF6F61; /* Mediterranean coral color */
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Add pointer cursor */
+}
+
+.explore-btn:hover {
+  background-color: #E84C39; /* Darker coral */
+}
+
+.explore-btn svg {
+  margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .country-item {
+    flex: 1 1 calc(50% - 20px); /* 2 items per row on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .country-item {
+    flex: 1 1 calc(50% - 20px); /* 2 items per row on phones */
+  }
+
+  .highlights-title {
+    font-size: 2rem; /* Smaller title for phones */
+  }
+}

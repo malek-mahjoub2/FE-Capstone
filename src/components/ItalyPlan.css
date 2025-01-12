@@ -1,0 +1,89 @@
+/* General Layout */
+main {
+  background-color: #fff; /* Set parent container background to white */
+  min-height: 100px; 
+  width: 100%;
+  margin:0;
+}
+.country-plan {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .header-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Center Content */
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Form Styling */
+  .input-form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    margin-right: 10px;
+  }
+  
+  input, select {
+    padding: 8px;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  /* Hotel & Places Styling */
+  .hotel-list, .places-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .hotel-card, .place-card {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .hotel-card:hover, .place-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Flight Details */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Header Text */
+  h1, h2 {
+    color: #333;
+  }
+  
+  /* General Footer & Total Cost */
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  

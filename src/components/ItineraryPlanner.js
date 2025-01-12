@@ -22,7 +22,7 @@ const ItineraryPlanner = () => {
       {/* Country Selection Menu */}
       <div className="menu">
         <button
-          className={selectedCountry === 'Tunisia' ? 'active' : ''}
+          className={selectedCountry === '/FE-Capstone/Tunisia' ? 'active' : ''}
           onClick={() => handleCountryChange('Tunisia')}
         >
           Tunisia

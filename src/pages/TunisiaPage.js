@@ -1,7 +1,6 @@
 import React from 'react';
-import './TunisiaPage.css';  // Ensure to add your CSS file here
+import './TunisiaPage.css'; 
 
-// Importing images for the sections
 import tunisiaHeaderImage from '../images/tunisiaHeader.jpg';  // Image for the header
 import carthageImage from '../images/carthage.jpg';  // Image for Carthage
 import saharaImage from '../images/sahara.jpg';  // Image for Sahara Desert
@@ -12,6 +11,7 @@ import fricassiImage from '../images/fricassi.jpg';
 import { FaArrowRight } from 'react-icons/fa';
 
 const TunisiaPage = () => { 
+ 
   return (
     <div className="tunisia-page">
 
@@ -105,7 +105,7 @@ const TunisiaPage = () => {
         <p>Click the button below to create your personalized itinerary and start your journey!</p>
         <button
           className="plan-trip-button"
-          onClick={() => window.open('/tunisia-plan', '_blank')} // Open in new tab
+          onClick={() => window.open('/FE-Capstone/tunisia-plan', '_blank')} // Open in new tab
         >
           Plan Your Trip <FaArrowRight />
         </button>

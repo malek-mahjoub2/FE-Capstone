@@ -115,7 +115,7 @@ const SpainPage = () => {
         <p>Click the button below to create your personalized itinerary and start your journey!</p>
         <button
           className="plan-trip-button"
-          onClick={() => window.open('/spain-plan', '_blank')} // Open in new tab
+          onClick={() => window.open('/FE-Capstone/spain-plan', '_blank')} // Open in new tab
         >
           Plan Your Trip <FaArrowRight />
         </button>

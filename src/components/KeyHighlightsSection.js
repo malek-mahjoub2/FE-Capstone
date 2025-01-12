@@ -41,7 +41,7 @@ const KeyHighlightsSection = () => {
           <h3>Tunisia</h3>
           <p>Explore the beaches, tranquil rivers, and natural parks like Ichkeul National Park and Chott el Jerid.</p>
           <Rating rating={4} reviews={1234} />
-          <button onClick={() => handleViewDetails('/tunisia')} className="explore-btn">
+          <button onClick={() => handleViewDetails('/FE-Capstone/tunisia')} className="explore-btn">
             View Details <FaArrowRight />
           </button>
         </div>
@@ -53,7 +53,7 @@ const KeyHighlightsSection = () => {
           <h3>Greece</h3>
           <p>Discover the stunning mountain trails of Crete and Pelion, ideal for trekking and nature exploration.</p>
           <Rating rating={5} reviews={987} />
-          <button onClick={() => handleViewDetails('/greece')} className="explore-btn">
+          <button onClick={() => handleViewDetails('/FE-Capstone/greece')} className="explore-btn">
             View Details <FaArrowRight />
           </button>
         </div>
@@ -65,7 +65,7 @@ const KeyHighlightsSection = () => {
           <h3>Italy</h3>
           <p>Venture through rugged mountains, nature reserves, and the Amalfi Coast’s scenic beauty.</p>
           <Rating rating={4.5} reviews={1567} />
-          <button onClick={() => handleViewDetails('/italy')} className="explore-btn">
+          <button onClick={() => handleViewDetails('/FE-Capstone/italy')} className="explore-btn">
             View Details <FaArrowRight />
           </button>
         </div>
@@ -77,7 +77,7 @@ const KeyHighlightsSection = () => {
           <h3>Spain</h3>
           <p>From the Sierra Nevada to Costa Brava, explore the natural beauty and cultural heritage of Spain.</p>
           <Rating rating={4.2} reviews={2345} /> 
-          <button onClick={() => handleViewDetails('/spain')} className="explore-btn">
+          <button onClick={() => handleViewDetails('/FE-Capstone/spain')} className="explore-btn">
             View Details <FaArrowRight />
           </button>
         </div>

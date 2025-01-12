@@ -14,26 +14,26 @@ const HeroSection = () => {
       event.preventDefault();
       
       const routes = {
-        tunisia: '/tunisia',
-        greece: '/greece',
-        spain: '/spain',
-        italy: '/italy',
+        tunisia: '/FE-Capstone/tunisia',
+        greece: '/FE-Capstone/greece',
+        spain: '/FE-Capstone/spain',
+        italy: '/FE-Capstone/italy',
       };
   
       // Get the route based on the search query
       const route = routes[searchQuery.toLowerCase()];
   
       if (route) {
-        // Open the destination page in a new tab
+        console.log('Opening route:', route);
         window.open(route, '_blank');
       } else {
-        // Show an alert if the destination is not found
+       
         alert('Oops! We don\'t have information on that destination yet. Please try another destination or contact us for personalized recommendations!');
       }
     };
       
   const handlePlanClick = () => {
-    window.open('/itinerary', '_self');
+    window.open('/FE-Capstone/itinerary', '_self');
   };
   return (
     <div className="hero-section">

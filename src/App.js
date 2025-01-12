@@ -22,12 +22,11 @@ import SpainPage from './pages/SpainPage';
 function App() {
   return (
     <div>
-      {/* Navbar is always visible */}
+ 
       <Navbar />
 
-      {/* Routes */}
       <Routes>
-        {/* Homepage */}
+
         <Route
           path="/"
           element={
@@ -67,7 +66,7 @@ function App() {
         <Route path="/greece-plan" element={<GreecePlan />} />
       </Routes>
 
-      {/* Footer is always visible */}
+      
       <Footer />
     </div>
   );

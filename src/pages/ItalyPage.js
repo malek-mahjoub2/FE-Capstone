@@ -106,7 +106,7 @@ const ItalyPage = () => {
         <p>Click the button below to create your personalized itinerary and start your journey!</p>
         <button
           className="plan-trip-button"
-          onClick={() => window.open('/italy-plan', '_blank')}
+          onClick={() => window.open('/FE-Capstone/italy-plan', '_blank')}
         >
           Plan Your Trip <FaArrowRight />
         </button>

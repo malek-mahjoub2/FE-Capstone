@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom'; // Supprimé BrowserRouter alias Router
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import ActivitiesSection from './components/Activities';
@@ -21,57 +21,55 @@ import SpainPage from './pages/SpainPage';
 
 function App() {
   return (
-    <Router>
-      <div>
-        {/* Navbar is always visible */}
-        <Navbar />
+    <div>
+      {/* Navbar is always visible */}
+      <Navbar />
 
-        {/* Routes */}
-        <Routes>
-          {/* Homepage */}
-          <Route
-            path="/"
-            element={
-              <>
-                <section id="home">
-                  <HeroSection />
-                </section>
-                <section id="destinations">
-                  <KeyHighlightsSection />
-                </section>
-                <section id="activities">
-                  <ActivitiesSection />
-                </section>
-                <section id="itinerary-planner">
-                  <ItineraryPlanner />
-                </section>
-                <section id="about">
-                  <AboutSection />
-                </section>
-                <section id="contact">
-                  <ContactSection />
-                </section>
-              </>
-            }
-          />
+      {/* Routes */}
+      <Routes>
+        {/* Homepage */}
+        <Route
+          path="/"
+          element={
+            <>
+              <section id="home">
+                <HeroSection />
+              </section>
+              <section id="destinations">
+                <KeyHighlightsSection />
+              </section>
+              <section id="activities">
+                <ActivitiesSection />
+              </section>
+              <section id="itinerary-planner">
+                <ItineraryPlanner />
+              </section>
+              <section id="about">
+                <AboutSection />
+              </section>
+              <section id="contact">
+                <ContactSection />
+              </section>
+            </>
+          }
+        />
 
-          {/* Destination Pages */}
-          <Route path="/tunisia" element={<TunisiaPage />} />
-          <Route path="/greece" element={<GreecePage />} />
-          <Route path="/italy" element={<ItalyPage />} />
-          <Route path="/spain" element={<SpainPage />} />
+        {/* Destination Pages */}
+        <Route path="/tunisia" element={<TunisiaPage />} />
+        <Route path="/greece" element={<GreecePage />} />
+        <Route path="/italy" element={<ItalyPage />} />
+        <Route path="/spain" element={<SpainPage />} />
 
-          {/* Plan Pages */}
-          <Route path="/tunisia-plan" element={<TunisiaPlan />} />
-          <Route path="/spain-plan" element={<SpainPlan />} />
-          <Route path="/italy-plan" element={<ItalyPlan />} />
-          <Route path="/greece-plan" element={<GreecePlan />} />
-        </Routes>
+        {/* Plan Pages */}
+        <Route path="/tunisia-plan" element={<TunisiaPlan />} />
+        <Route path="/spain-plan" element={<SpainPlan />} />
+        <Route path="/italy-plan" element={<ItalyPlan />} />
+        <Route path="/greece-plan" element={<GreecePlan />} />
+      </Routes>
 
-        {/* Footer is always visible */}
-        <Footer />
-      </div>
-    </Router>
+      {/* Footer is always visible */}
+      <Footer />
+    </div>
   );
 }
 

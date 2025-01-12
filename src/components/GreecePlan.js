@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { fetchFlights } from '../api/flight';
 import headerImage from '../images/header.jpg'; 
 import './GreecePlan.css';
 
 const GreecePlan = () => {
-  const [flights, setFlights] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
   const [fromCity, setFromCity] = useState('BCN'); // Default fromEntityId (Barcelona)
   const [departDate, setDepartDate] = useState('2025-06-21'); // Default date
@@ -59,47 +58,28 @@ const GreecePlan = () => {
   ];
 
   useEffect(() => {
-    const fetchFlights = async () => {
-      const response = await axios.post(
-        'https://sky-scanner3.p.rapidapi.com/flights/search-multi-city',
-        {
-          market: 'US',
-          locale: 'en-US',
-          currency: 'USD',
-          adults: 1,
-          children: 0,
-          infants: 0,
-          cabinclass: 'economy',
-          stops: ['direct', '1stop', '2stops'],
-          sort: 'cheapest_first',
-          airlines: [-32753, -32695],
-          flights: [
-            { fromEntityId: fromCity, toEntityId: 'ATH', departDate: departDate },
-          ],
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'x-rapidapi-host': 'sky-scanner3.p.rapidapi.com',
-            'x-rapidapi-key': '6c0197e667mshe3ae4cf333d67a8p178ee6jsnbe828bef6ac9',
-          },
-        }
-      );
-      setFlightDetails(response.data);
-      calculateTotalCost(response.data);
+    const getFlights = async () => {
+      try {
+        const data = await fetchFlights(fromCity, departDate); // Use the API function
+        setFlightDetails(data);
+        calculateTotalCost(data);
+      } catch (error) {
+        console.error('Error fetching flights:', error);
+      }
     };
 
     if (fromCity && departDate) {
-      fetchFlights();
+      getFlights();
     }
   }, [fromCity, departDate]);
 
   const calculateTotalCost = (flightData) => {
     const flightCost = flightData[0]?.price || 0;
-    const hotelCost = 250; // Placeholder for hotel cost
+    const hotelCost = 200; // Placeholder for hotel cost
     const total = flightCost + hotelCost;
     setTotalCost(total);
   };
+
 
   return (
     <div id="itinerary" className="country-plan">

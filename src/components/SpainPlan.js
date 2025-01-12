@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { fetchFlights } from '../api/flight';
 import './SpainPlan.css';
 import headerImage from '../images/header.jpg';
 import barcelona from '../images/barcelona1.jpg'; // Import the header image
@@ -51,36 +51,18 @@ const SpainPlan = () => {
   ];
 
   useEffect(() => {
-    const fetchFlights = async () => {
-      const response = await axios.post(
-        'https://sky-scanner3.p.rapidapi.com/flights/search-multi-city',
-        {
-          market: 'US',
-          locale: 'en-US',
-          currency: 'USD',
-          adults: 1,
-          children: 0,
-          infants: 0,
-          cabinclass: 'economy',
-          stops: ['direct', '1stop', '2stops'],
-          sort: 'cheapest_first',
-          airlines: [-32753, -32695],
-          flights: [{ fromEntityId: fromCity, toEntityId: 'BCN', departDate: departDate }],
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'x-rapidapi-host': 'sky-scanner3.p.rapidapi.com',
-            'x-rapidapi-key': '6c0197e667mshe3ae4cf333d67a8p178ee6jsnbe828bef6ac9',
-          },
-        }
-      );
-      setFlightDetails(response.data);
-      calculateTotalCost(response.data);
+    const getFlights = async () => {
+      try {
+        const data = await fetchFlights(fromCity, departDate); // Use the API function
+        setFlightDetails(data);
+        calculateTotalCost(data);
+      } catch (error) {
+        console.error('Error fetching flights:', error);
+      }
     };
 
     if (fromCity && departDate) {
-      fetchFlights();
+      getFlights();
     }
   }, [fromCity, departDate]);
 
@@ -90,6 +72,7 @@ const SpainPlan = () => {
     const total = flightCost + hotelCost;
     setTotalCost(total);
   };
+
 
   return (
     <div className="country-plan">

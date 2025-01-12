@@ -1,8 +1,8 @@
 {
-  "name": "travel-planner",
+  "name": "fe-capstone",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://malek-mahjoub2.github.io/Travel-Planner-Capstone",
+  "homepage": "https://malek-mahjoub2.github.io/FE-Capstone",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@types/jest": "^29.5.14",

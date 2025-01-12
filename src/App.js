@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import ActivitiesSection from './components/Activities';
-import Footer from './components/Footer'; 
+import Footer from './components/Footer';
 import AboutSection from './components/About';
 import ItineraryPlanner from './components/ItineraryPlanner';
 import KeyHighlightsSection from './components/KeyHighlightsSection';
@@ -33,54 +33,43 @@ function App() {
             path="/"
             element={
               <>
-              <section id="home">
-                <HeroSection />
-              </section>
-                
-              <section id="destinations">
-                <KeyHighlightsSection />
-              </section>
-
-              <section id="activities">
+                <section id="home">
+                  <HeroSection />
+                </section>
+                <section id="destinations">
+                  <KeyHighlightsSection />
+                </section>
+                <section id="activities">
                   <ActivitiesSection />
-              </section>
-              <section id="itinerary-planner">
+                </section>
+                <section id="itinerary-planner">
                   <ItineraryPlanner />
-              </section>
-              <section id="about">
-                <AboutSection />
-              </section>
-              <section id="contact">
+                </section>
+                <section id="about">
+                  <AboutSection />
+                </section>
+                <section id="contact">
                   <ContactSection />
-              </section>
-              <Footer />
+                </section>
               </>
-            
             }
           />
 
           {/* Destination Pages */}
-          <Route path="tunisia" element={<TunisiaPage />} />
-          <Route path="greece" element={<GreecePage />} />
-          <Route path="italy" element={<ItalyPage />} />
-          <Route path="spain" element={<SpainPage />} />
-
-        <Route path="/tunisia-plan" element={<TunisiaPlan />} />
-        <Route path="/spain-plan" element={<SpainPlan />} />
-        <Route path="/italy-plan" element={<ItalyPlan />} />
-        <Route path="/greece-plan" element={<GreecePlan />} />
-
-        <Route path="itinerary" element={<ItineraryPlanner />} />
-      
+          <Route path="/tunisia" element={<TunisiaPage />} />
+          <Route path="/greece" element={<GreecePage />} />
+          <Route path="/italy" element={<ItalyPage />} />
+          <Route path="/spain" element={<SpainPage />} />
 
           {/* Plan Pages */}
-          <Route path="plan/tunisia" element={<TunisiaPlan />} />
-          <Route path="plan/spain" element={<SpainPlan />} />
-          <Route path="plan/italy" element={<ItalyPlan />} />
-          <Route path="plan/greece" element={<GreecePlan />} />
+          <Route path="/tunisia-plan" element={<TunisiaPlan />} />
+          <Route path="/spain-plan" element={<SpainPlan />} />
+          <Route path="/italy-plan" element={<ItalyPlan />} />
+          <Route path="/greece-plan" element={<GreecePlan />} />
         </Routes>
 
-        
+        {/* Footer is always visible */}
+        <Footer />
       </div>
     </Router>
   );
